@@ -2,6 +2,9 @@ package fr.diginamic.recensement.services;
 
 import java.util.Scanner;
 
+import fr.diginamic.recensement.Exceptions.InchoerantsNValuesException;
+import fr.diginamic.recensement.Exceptions.NotANumberException;
+import fr.diginamic.recensement.Exceptions.UserWarning;
 import fr.diginamic.recensement.entites.Recensement;
 
 /**
@@ -18,6 +21,9 @@ public abstract class MenuService {
 	 * 
 	 * @param lignes  lignes du fichier
 	 * @param scanner scanner
+	 * @throws UserWarning
+	 * @throws NotANumberException 
+	 * @throws InchoerantsNValuesException 
 	 */
-	public abstract void traiter(Recensement recensement, Scanner scanner);
+	public abstract void traiter(Recensement recensement, Scanner scanner) throws UserWarning;
 }
